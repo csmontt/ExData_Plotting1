@@ -40,10 +40,7 @@ data_subset[, c(3:9)] <- as.numeric(unlist(data_subset[, c(3:9)]))
 ## Then back to (US) English
 Sys.setlocale("LC_TIME", "English")
 
-#plot(data_subset$date_time, data_subset$Global_active_power, type = "l",
-#     xlab = "", ylab = "Global Active Power (kilowatts)")
-
-# Reproduce and write histogram
+# Reproduce and write plot
 # to .png file width of 480 pixels and a height of 480 pixels
 png(filename = "plot2.png", width = 480, height = 480)
 with(data_subset, plot(date_time, Global_active_power, type = "l",
