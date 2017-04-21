@@ -57,7 +57,8 @@ with(data_subset, {
                                xlab = "", ylab = "Energy sub metering")
         lines(data_subset$date_time,data_subset$Sub_metering_2,col="red")
         lines(data_subset$date_time,data_subset$Sub_metering_3,col="blue")
-        
+        legend("topright", names(data_subset[,7:9]) ,
+               lty=1, col=c("black", "red", "blue"))
         #
         plot(date_time, Global_reactive_power, type = "l",
              xlab = "datetime")
